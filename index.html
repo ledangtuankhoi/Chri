@@ -677,6 +677,11 @@
         document.getElementsByClassName('name')[0].innerHTML = name ? name : "";
 
         baubles.forEach((bauble, i) => {
+
+          
+        const name = urlParams.get('n')
+        document.getElementsByClassName('name')[0].innerHTML = name ? name : "";
+        
             // Tree
             const y = Math.pow(i / baublesLength, 0.5) * maxY * 2 - maxY;
             const x =
