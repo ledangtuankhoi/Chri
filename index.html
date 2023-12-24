@@ -527,9 +527,9 @@
             </div>
         </ul>
         </div>
-        <div class="merry" style="position: absolute;bottom: 10px; font-size: 2rem; z-index: 11;">
+        <div class="merry" style="position: absolute;bottom: 10%; font-size: 2rem; z-index: 11;">
             <!-- <h1 style="color: #c84257;">Merry Christmas</h1> -->
-            <h1 style="color: #c84257;">Merry Christmas</h1>
+            <h1 style="color: #c84257; font-size: inherit;">Merry Christmas <p class="name"></p></h1>
         </div>
 
 
@@ -670,6 +670,11 @@
         const maxX = 30;
         const maxY = 35;
         const baublesLength = baubles.length;
+
+        const queryString = window.location.search;
+        const urlParams = new URLSearchParams(queryString);
+        const name = urlParams.get('n')
+        document.getElementsByClassName('name')[0].innerHTML = name ? name : "";
 
         baubles.forEach((bauble, i) => {
             // Tree
